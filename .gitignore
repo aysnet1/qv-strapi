@@ -12,8 +12,10 @@ yarn.lock
 .vscode/launch.json
 src
 .travis.yml
-package.json
+ h.json
 tslint.json
-tscongig.json
+tsconfig.json
+tsconfig.module.json
 .npmignore
 
+package.json

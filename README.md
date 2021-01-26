@@ -6,12 +6,12 @@
 ## Install
 
 ```sh
-npm install strapi-sdk-javascript
+npm install @aysnet/qv-strapi
 ```
 'or'
 
 ```sh
-yarn add strapi-sdk-javascript
+yarn add @aysnet/qv-strapi
 ```
 
 ## Start now

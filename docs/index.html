@@ -65,10 +65,10 @@
 				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
 					<h2>Install</h2>
 				</a>
-				<pre><code class="language-sh"><span style="color: #000000">npm install strapi-sdk-javascript</span>
+				<pre><code class="language-sh"><span style="color: #000000">npm install @aysnet/qv-strapi</span>
 </code></pre>
 				<p>&#39;or&#39;</p>
-				<pre><code class="language-sh"><span style="color: #000000">yarn add strapi-sdk-javascript</span>
+				<pre><code class="language-sh"><span style="color: #000000">yarn add @aysnet/qv-strapi</span>
 </code></pre>
 				<a href="#start-now" id="start-now" style="color: inherit; text-decoration: none;">
 					<h2>Start now</h2>
@@ -127,12 +127,12 @@
 				<a href="#login" id="login" style="color: inherit; text-decoration: none;">
 					<h3>Login</h3>
 				</a>
-				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">login</span><span style="color: #000000">(</span><span style="color: #001080">identifier</span><span style="color: #000000">, </span><span style="color: #001080">password</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">login</span><span style="color: #000000">({</span><span style="color: #001080">identifier:</span><span style="color: #A31515">&#039;email&#039;</span><span style="color: #000000">, </span><span style="color: #001080">password:</span><span style="color: #A31515">&#039;password&#039;</span><span style="color: #000000">})</span>
 </code></pre>
 				<a href="#register" id="register" style="color: inherit; text-decoration: none;">
 					<h3>Register</h3>
 				</a>
-				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">register</span><span style="color: #000000">( </span><span style="color: #001080">email</span><span style="color: #000000">, </span><span style="color: #001080">username</span><span style="color: #000000">, </span><span style="color: #001080">password</span><span style="color: #000000"> )</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">register</span><span style="color: #000000">({</span><span style="color: #001080">email:</span><span style="color: #A31515">&#039;email&#039;</span><span style="color: #000000">, </span><span style="color: #001080">username:</span><span style="color: #A31515">&#039;username&#039;</span><span style="color: #000000">, </span><span style="color: #001080">password:</span><span style="color: #A31515">&#039;password&#039;</span><span style="color: #000000">} )</span>
 </code></pre>
 				<a href="#logout" id="logout" style="color: inherit; text-decoration: none;">
 					<h3>Logout</h3>
@@ -142,40 +142,41 @@
 				<a href="#forgot-password" id="forgot-password" style="color: inherit; text-decoration: none;">
 					<h3>Forgot password</h3>
 				</a>
-				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">forgotPassword</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;email&#039;</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">forgotPassword</span><span style="color: #000000">({</span><span style="color: #001080">email:</span><span style="color: #A31515">&#039;email&#039;</span><span style="color: #000000">})</span>
 </code></pre>
 				<a href="#reset-password" id="reset-password" style="color: inherit; text-decoration: none;">
 					<h3>Reset password</h3>
 				</a>
-				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">resetPassword</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$route</span><span style="color: #000000">.</span><span style="color: #001080">query</span><span style="color: #000000">.</span><span style="color: #001080">code</span><span style="color: #000000"> </span><span style="color: #008000">/*url*/</span><span style="color: #000000">, </span><span style="color: #001080">password</span><span style="color: #000000">, </span><span style="color: #001080">passwordConfirmation</span><span style="color: #000000">)</span>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">resetPassword</span><span style="color: #000000">({</span><span style="color: #001080">code:</span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$route</span><span style="color: #000000">.</span><span style="color: #001080">query</span><span style="color: #000000">.</span><span style="color: #001080">code</span><span style="color: #000000"> </span><span style="color: #008000">/*url*/</span><span style="color: #000000">, </span><span style="color: #001080">password:</span><span style="color: #A31515">&#039;password&#039;</span><span style="color: #000000">, </span><span style="color: #001080">passwordConfirmation:</span><span style="color: #A31515">&#039;passwordConfir..&#039;</span><span style="color: #000000">})</span>
 </code></pre>
 				<a href="#user" id="user" style="color: inherit; text-decoration: none;">
 					<h3>User</h3>
 				</a>
 				<p>Once logged in, you can access your <code>user</code> everywhere:</p>
-				<pre><code class="language-vue{}[components/navbar.vue]">&lt;template&gt;
-  &lt;div&gt;
-    &lt;p v-if=&quot;$strapi.user&quot;&gt;
-      Logged in
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+				<pre><code class="language-vue"><span style="color: #800000">&lt;template&gt;</span>
+<span style="color: #000000">  </span><span style="color: #800000">&lt;div&gt;</span>
+<span style="color: #000000">    </span><span style="color: #800000">&lt;p</span><span style="color: #000000"> </span><span style="color: #FF0000">v-if</span><span style="color: #000000">=</span><span style="color: #000000">&quot;</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #001080">user</span><span style="color: #000000">&quot;</span><span style="color: #800000">&gt;</span>
+<span style="color: #000000">      Logged in</span>
+<span style="color: #000000">    </span><span style="color: #800000">&lt;/p&gt;</span>
+<span style="color: #000000">  </span><span style="color: #800000">&lt;/div&gt;</span>
+<span style="color: #800000">&lt;/template&gt;</span>
 
-&lt;script&gt;
-export default {
-  computed: {
-    user () {
-      return this.$strapi.user
-    }
-  },
-  methods: {
-    logout () {
-      this.$strapi.logout()
-      this.$router.push(&#39;/&#39;)
-    }
-  }
-}
-&lt;/script&gt;</code></pre>
+<span style="color: #800000">&lt;script&gt;</span>
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #AF00DB">default</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">computed:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #795E26">user</span><span style="color: #000000"> () {</span>
+<span style="color: #000000">      </span><span style="color: #AF00DB">return</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #001080">user</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  </span><span style="color: #001080">methods:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #795E26">logout</span><span style="color: #000000"> () {</span>
+<span style="color: #000000">      </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">logout</span><span style="color: #000000">()</span>
+<span style="color: #000000">      </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$router</span><span style="color: #000000">.</span><span style="color: #795E26">push</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;/&#039;</span><span style="color: #000000">)</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+<span style="color: #800000">&lt;/script&gt;</span>
+</code></pre>
 				<a href="#entities" id="entities" style="color: inherit; text-decoration: none;">
 					<h2>Entities</h2>
 				</a>
@@ -191,6 +192,7 @@ export default {
 					<li><code>findFile</code></li>
 					<li><code>findFiles</code></li>
 					<li><code>upload</code></li>
+					<li><code>fetch</code></li>
 				</ul>
 				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">find</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;products&#039;</span><span style="color: #000000">)</span>
 </code></pre>
