@@ -264,5 +264,5 @@ const files = await strapi.upload(form, {
 ## License
 
 MIT
-* [Documentation](https://aysnet1.github.io/qv-starpi)
+* [Documentation](https://aysnet1.github.io/qv-strapi/index.html)
 
