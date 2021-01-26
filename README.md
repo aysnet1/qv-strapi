@@ -1,6 +1,6 @@
 # Strapi plugin vuejs and Quasar Project
 
-
+ 
 <br>
 
 ## Install
