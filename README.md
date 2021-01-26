@@ -66,13 +66,13 @@ To handle authentication in your Vue / quasar app with Strapi, you can:
 ### Login
 
 ```js
-await this.$strapi.login(identifier, password)
+await this.$strapi.login({identifier:'email', password:'password'})
 ```
 
 ### Register
 
 ```js
-await this.$strapi.register( email, username, password )
+await this.$strapi.register({email:'email', username:'username', password:'password'} )
 ```
 
 ### Logout
@@ -84,20 +84,20 @@ await this.$strapi.logout()
 ### Forgot password
 
 ```js
-await this.$strapi.forgotPassword('email')
+await this.$strapi.forgotPassword({email:'email'})
 ```
 
 ### Reset password
 
 ```js
-await this.$strapi.resetPassword(this.$route.query.code /*url*/, password, passwordConfirmation)
+await this.$strapi.resetPassword({code:this.$route.query.code /*url*/, password:'password', passwordConfirmation:'passwordConfir..'})
 ```
 
 ### User
 
 Once logged in, you can access your `user` everywhere:
 
-```vue{}[components/navbar.vue]
+```vue
 <template>
   <div>
     <p v-if="$strapi.user">
@@ -140,6 +140,7 @@ You can access the default Strapi CRUD operations by using these methods:
 - `findFile`
 - `findFiles`
 - `upload`
+- `fetch`
 
 ```js
 await this.$strapi.find('products')
