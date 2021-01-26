@@ -20,7 +20,7 @@ yarn add @aysnet/qv-strapi
 ##### Vuejs
 ```js 
 import Vue from 'vue';
-import Strapi from 'strapi-sdk-javascript';
+import Strapi from '@aysnet/qv-strapi';
 const  options = {
     url:'', // by default : 'http://localhost:1337
     storeConfig: {
@@ -41,8 +41,21 @@ Vue.use(strapi)
 ##### Quasar Project [boot/strapi.js]
 ```js 
 import Vue from 'vue'
-import Strapi from '@q-strapi';
-import { options } from './../strapi.options'
+import Strapi from '@aysnet/qv-strapi';
+
+const  options = {
+    url:'', // by default : 'http://localhost:1337
+    storeConfig: {
+        cookie: {
+        key: 'jwt',
+        options: {
+          path: '/'
+        }
+    },
+    localStorage:{} // | boolean
+    },
+    requestConfig: '',
+}
 
 const strapi = new Strapi(options)
 export default ({
