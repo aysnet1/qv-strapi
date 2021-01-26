@@ -80,7 +80,7 @@
 					<h5>Vuejs</h5>
 				</a>
 				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Vue</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;vue&#039;</span><span style="color: #000000">;</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Strapi</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@aysnet/qv-strapi&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Strapi</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;strapi-sdk-javascript&#039;</span><span style="color: #000000">;</span>
 <span style="color: #0000FF">const</span><span style="color: #000000">  </span><span style="color: #0070C1">options</span><span style="color: #000000"> = {</span>
 <span style="color: #000000">    </span><span style="color: #001080">url:</span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// by default : &#039;http://localhost:1337</span>
 <span style="color: #000000">    </span><span style="color: #001080">storeConfig:</span><span style="color: #000000"> {</span>
@@ -102,21 +102,8 @@
 					<h5>Quasar Project [boot/strapi.js]</h5>
 				</a>
 				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Vue</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;vue&#039;</span>
-<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Strapi</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@aysnet/qv-strapi&#039;</span><span style="color: #000000">;</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000">  </span><span style="color: #0070C1">options</span><span style="color: #000000"> = {</span>
-<span style="color: #000000">    </span><span style="color: #001080">url:</span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// by default : &#039;http://localhost:1337</span>
-<span style="color: #000000">    </span><span style="color: #001080">storeConfig:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #001080">cookie:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">        </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;jwt&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">        </span><span style="color: #001080">options:</span><span style="color: #000000"> {</span>
-<span style="color: #000000">          </span><span style="color: #001080">path:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;/&#039;</span>
-<span style="color: #000000">        }</span>
-<span style="color: #000000">    },</span>
-<span style="color: #000000">    </span><span style="color: #001080">localStorage:</span><span style="color: #000000">{} </span><span style="color: #008000">// | boolean</span>
-<span style="color: #000000">    },</span>
-<span style="color: #000000">    </span><span style="color: #001080">requestConfig:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">}</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Strapi</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@q-strapi&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">options</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./../strapi.options&#039;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">strapi</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Strapi</span><span style="color: #000000">(</span><span style="color: #001080">options</span><span style="color: #000000">)</span>
 <span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #AF00DB">default</span><span style="color: #000000"> ({</span>
