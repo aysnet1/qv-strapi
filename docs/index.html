@@ -1,0 +1,383 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>strapi-sdk-javascript</title>
+	<meta name="description" content="Documentation for strapi-sdk-javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">strapi-sdk-javascript</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>strapi-sdk-javascript</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#strapi-plugin-vuejs-and-quasar-project" id="strapi-plugin-vuejs-and-quasar-project" style="color: inherit; text-decoration: none;">
+					<h1>Strapi plugin vuejs and Quasar Project</h1>
+				</a>
+				<br>
+				<a href="#install" id="install" style="color: inherit; text-decoration: none;">
+					<h2>Install</h2>
+				</a>
+				<pre><code class="language-sh"><span style="color: #000000">npm install strapi-sdk-javascript</span>
+</code></pre>
+				<p>&#39;or&#39;</p>
+				<pre><code class="language-sh"><span style="color: #000000">yarn add strapi-sdk-javascript</span>
+</code></pre>
+				<a href="#start-now" id="start-now" style="color: inherit; text-decoration: none;">
+					<h2>Start now</h2>
+				</a>
+				<a href="#new-instance" id="new-instance" style="color: inherit; text-decoration: none;">
+					<h3>New instance</h3>
+				</a>
+				<a href="#vuejs" id="vuejs" style="color: inherit; text-decoration: none;">
+					<h5>Vuejs</h5>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Vue</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;vue&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Strapi</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;strapi-sdk-javascript&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000">  </span><span style="color: #0070C1">options</span><span style="color: #000000"> = {</span>
+<span style="color: #000000">    </span><span style="color: #001080">url:</span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">, </span><span style="color: #008000">// by default : &#039;http://localhost:1337</span>
+<span style="color: #000000">    </span><span style="color: #001080">storeConfig:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">cookie:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">key:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;jwt&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">options:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">          </span><span style="color: #001080">path:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;/&#039;</span>
+<span style="color: #000000">        }</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #001080">localStorage:</span><span style="color: #000000">{} </span><span style="color: #008000">// | boolean</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #001080">requestConfig:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">}</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">strapi</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Strapi</span><span style="color: #000000">(</span><span style="color: #001080">options</span><span style="color: #000000">)</span>
+<span style="color: #001080">Vue</span><span style="color: #000000">.</span><span style="color: #795E26">use</span><span style="color: #000000">(</span><span style="color: #001080">strapi</span><span style="color: #000000">)</span>
+</code></pre>
+				<hr>
+				<a href="#quasar-project-bootstrapijs" id="quasar-project-bootstrapijs" style="color: inherit; text-decoration: none;">
+					<h5>Quasar Project [boot/strapi.js]</h5>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Vue</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;vue&#039;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">Strapi</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;@q-strapi&#039;</span><span style="color: #000000">;</span>
+<span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">options</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;./../strapi.options&#039;</span>
+
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">strapi</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Strapi</span><span style="color: #000000">(</span><span style="color: #001080">options</span><span style="color: #000000">)</span>
+<span style="color: #AF00DB">export</span><span style="color: #000000"> </span><span style="color: #AF00DB">default</span><span style="color: #000000"> ({</span>
+<span style="color: #000000">  </span><span style="color: #001080">Vue</span>
+<span style="color: #000000">}) </span><span style="color: #0000FF">=&gt;</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #267F99">Vue</span><span style="color: #000000">.</span><span style="color: #001080">prototype</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000"> = </span><span style="color: #001080">strapi</span>
+<span style="color: #000000">}</span>
+
+
+<span style="color: #AF00DB">export</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #001080">strapi</span>
+<span style="color: #000000">}</span>
+</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h3>usage</h3>
+				</a>
+				<a href="#authentication" id="authentication" style="color: inherit; text-decoration: none;">
+					<h2>Authentication</h2>
+				</a>
+				<p>To handle authentication in your Vue / quasar app with Strapi, you can:</p>
+				<a href="#login" id="login" style="color: inherit; text-decoration: none;">
+					<h3>Login</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">login</span><span style="color: #000000">(</span><span style="color: #001080">identifier</span><span style="color: #000000">, </span><span style="color: #001080">password</span><span style="color: #000000">)</span>
+</code></pre>
+				<a href="#register" id="register" style="color: inherit; text-decoration: none;">
+					<h3>Register</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">register</span><span style="color: #000000">( </span><span style="color: #001080">email</span><span style="color: #000000">, </span><span style="color: #001080">username</span><span style="color: #000000">, </span><span style="color: #001080">password</span><span style="color: #000000"> )</span>
+</code></pre>
+				<a href="#logout" id="logout" style="color: inherit; text-decoration: none;">
+					<h3>Logout</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">logout</span><span style="color: #000000">()</span>
+</code></pre>
+				<a href="#forgot-password" id="forgot-password" style="color: inherit; text-decoration: none;">
+					<h3>Forgot password</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">forgotPassword</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;email&#039;</span><span style="color: #000000">)</span>
+</code></pre>
+				<a href="#reset-password" id="reset-password" style="color: inherit; text-decoration: none;">
+					<h3>Reset password</h3>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">resetPassword</span><span style="color: #000000">(</span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$route</span><span style="color: #000000">.</span><span style="color: #001080">query</span><span style="color: #000000">.</span><span style="color: #001080">code</span><span style="color: #000000"> </span><span style="color: #008000">/*url*/</span><span style="color: #000000">, </span><span style="color: #001080">password</span><span style="color: #000000">, </span><span style="color: #001080">passwordConfirmation</span><span style="color: #000000">)</span>
+</code></pre>
+				<a href="#user" id="user" style="color: inherit; text-decoration: none;">
+					<h3>User</h3>
+				</a>
+				<p>Once logged in, you can access your <code>user</code> everywhere:</p>
+				<pre><code class="language-vue{}[components/navbar.vue]">&lt;template&gt;
+  &lt;div&gt;
+    &lt;p v-if=&quot;$strapi.user&quot;&gt;
+      Logged in
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  computed: {
+    user () {
+      return this.$strapi.user
+    }
+  },
+  methods: {
+    logout () {
+      this.$strapi.logout()
+      this.$router.push(&#39;/&#39;)
+    }
+  }
+}
+&lt;/script&gt;</code></pre>
+				<a href="#entities" id="entities" style="color: inherit; text-decoration: none;">
+					<h2>Entities</h2>
+				</a>
+				<p>You can access the default Strapi CRUD operations by using these methods:</p>
+				<ul>
+					<li><code>find</code></li>
+					<li><code>count</code></li>
+					<li><code>findByid</code></li>
+					<li><code>create</code></li>
+					<li><code>update</code></li>
+					<li><code>delete</code></li>
+					<li><code>searchFiles</code></li>
+					<li><code>findFile</code></li>
+					<li><code>findFiles</code></li>
+					<li><code>upload</code></li>
+				</ul>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">find</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;products&#039;</span><span style="color: #000000">)</span>
+</code></pre>
+				<a href="#updating-current-user" id="updating-current-user" style="color: inherit; text-decoration: none;">
+					<h3>Updating current user</h3>
+				</a>
+				<alert type="info">
+					<p>You often need to update your user, and so on define a custom route in Strapi: <code>PUT /users/me</code>.</p>
+				</alert>
+				<p>You can use this module to call it this way:</p>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">user</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #001080">$users</span><span style="color: #000000">.</span><span style="color: #795E26">update</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;me&#039;</span><span style="color: #000000">, </span><span style="color: #001080">form</span><span style="color: #000000">)</span>
+</code></pre>
+				<p>And then mutate the <code>user</code>:</p>
+				<pre><code class="language-js"><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #001080">user</span><span style="color: #000000"> = </span><span style="color: #001080">user</span>
+</code></pre>
+				<a href="#authentications" id="authentications" style="color: inherit; text-decoration: none;">
+					<h3>Authentications</h3>
+				</a>
+				<a href="#local" id="local" style="color: inherit; text-decoration: none;">
+					<h4>Local</h4>
+				</a>
+				<pre><code class="language-js"><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">strapi</span><span style="color: #000000">.</span><span style="color: #795E26">login</span><span style="color: #000000">({</span><span style="color: #001080">identifier:</span><span style="color: #A31515">&#039;email&#039;</span><span style="color: #000000">, </span><span style="color: #001080">password:</span><span style="color: #A31515">&#039;password&#039;</span><span style="color: #000000">});</span>
+</code></pre>
+				<pre><code class="language-js"><span style="color: #008000">// Redirect your user to the provider&#039;s authentication page.</span>
+<span style="color: #001080">window</span><span style="color: #000000">.</span><span style="color: #001080">location</span><span style="color: #000000"> = </span><span style="color: #001080">strapi</span><span style="color: #000000">.</span><span style="color: #795E26">getProviderAuthenticationUrl</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;facebook&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+				<p>Once authorized, the provider will redirects the user to your app with an access token in the URL.</p>
+				<pre><code class="language-js"><span style="color: #008000">// Complete the authentication: (The SDK will store the access token for you)</span>
+<span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">strapi</span><span style="color: #000000">.</span><span style="color: #795E26">authenticateProvider</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;facebook&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+				<p>You can now fetch private APIs</p>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">posts</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">strapi</span><span style="color: #000000">.</span><span style="color: #795E26">find</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;posts&#039;</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#files-management" id="files-management" style="color: inherit; text-decoration: none;">
+					<h3>Files management</h3>
+				</a>
+				<a href="#browser" id="browser" style="color: inherit; text-decoration: none;">
+					<h4>Browser</h4>
+				</a>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">form</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">FormData</span><span style="color: #000000">();</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">append</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;files&#039;</span><span style="color: #000000">, </span><span style="color: #001080">fileInputElement</span><span style="color: #000000">.</span><span style="color: #001080">files</span><span style="color: #000000">[</span><span style="color: #098658">0</span><span style="color: #000000">], </span><span style="color: #A31515">&#039;file-name.ext&#039;</span><span style="color: #000000">);</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">append</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;files&#039;</span><span style="color: #000000">, </span><span style="color: #001080">fileInputElement</span><span style="color: #000000">.</span><span style="color: #001080">files</span><span style="color: #000000">[</span><span style="color: #098658">1</span><span style="color: #000000">], </span><span style="color: #A31515">&#039;file-2-name.ext&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">files</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">strapi</span><span style="color: #000000">.</span><span style="color: #795E26">upload</span><span style="color: #000000">(</span><span style="color: #001080">form</span><span style="color: #000000">);</span>
+</code></pre>
+				<a href="#nodejs" id="nodejs" style="color: inherit; text-decoration: none;">
+					<h4>Node.js</h4>
+				</a>
+				<pre><code class="language-js"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">FormData</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;form-data&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">fs</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;fs&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">form</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">FormData</span><span style="color: #000000">();</span>
+<span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">append</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;files&#039;</span><span style="color: #000000">, </span><span style="color: #001080">fs</span><span style="color: #000000">.</span><span style="color: #795E26">createReadStream</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;./file-name.ext&#039;</span><span style="color: #000000">), </span><span style="color: #A31515">&#039;file-name.ext&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">files</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">strapi</span><span style="color: #000000">.</span><span style="color: #795E26">upload</span><span style="color: #000000">(</span><span style="color: #001080">form</span><span style="color: #000000">, {</span>
+<span style="color: #000000">  </span><span style="color: #001080">headers:</span><span style="color: #000000"> </span><span style="color: #001080">form</span><span style="color: #000000">.</span><span style="color: #795E26">getHeaders</span><span style="color: #000000">()</span>
+<span style="color: #000000">});</span>
+</code></pre>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h2>API</h2>
+				</a>
+				<a href="#strapiurl-storeconfig-requestconfig-url-default-loclahost1337" id="strapiurl-storeconfig-requestconfig-url-default-loclahost1337" style="color: inherit; text-decoration: none;">
+					<h3><code>Strapi({url, storeConfig, requestConfig})</code> ..url default: loclahost:1337</h3>
+				</a>
+				<a href="#requestmethod-url-requestconfig" id="requestmethod-url-requestconfig" style="color: inherit; text-decoration: none;">
+					<h3><code>request(method, url, requestConfig)</code></h3>
+				</a>
+				<a href="#registerusername39usernme39-email39email39-password39password39-" id="registerusername39usernme39-email39email39-password39password39-" style="color: inherit; text-decoration: none;">
+					<h3><code>register(username:&#39;usernme&#39;, email:&#39;email&#39;, password:&#39;password&#39; )</code></h3>
+				</a>
+				<a href="#loginidentifier39email39-password39password39" id="loginidentifier39email39-password39password39" style="color: inherit; text-decoration: none;">
+					<h3><code>login({identifier:&#39;email&#39;, password:&#39;password&#39;})</code></h3>
+				</a>
+				<a href="#forgotpasswordemail39email39" id="forgotpasswordemail39email39" style="color: inherit; text-decoration: none;">
+					<h3><code>forgotPassword({email:&#39;email&#39;})</code></h3>
+				</a>
+				<a href="#resetpasswordcode39code39-password39password39-passwordconfirmation39passwordconfirmation39" id="resetpasswordcode39code39-password39password39-passwordconfirmation39passwordconfirmation39" style="color: inherit; text-decoration: none;">
+					<h3><code>resetPassword({code:&#39;code&#39;, password:&#39;password&#39;, passwordConfirmation:&#39;passwordConfirmation&#39;})</code></h3>
+				</a>
+				<a href="#getproviderauthenticationurlprovider" id="getproviderauthenticationurlprovider" style="color: inherit; text-decoration: none;">
+					<h3><code>getProviderAuthenticationUrl(provider)</code></h3>
+				</a>
+				<a href="#authenticateproviderprovider-params" id="authenticateproviderprovider-params" style="color: inherit; text-decoration: none;">
+					<h3><code>authenticateProvider(provider, params)</code></h3>
+				</a>
+				<a href="#settokentoken-comesfromstorage" id="settokentoken-comesfromstorage" style="color: inherit; text-decoration: none;">
+					<h3><code>setToken(token, comesFromStorage)</code></h3>
+				</a>
+				<a href="#cleartokentoken" id="cleartokentoken" style="color: inherit; text-decoration: none;">
+					<h3><code>clearToken(token)</code></h3>
+				</a>
+				<a href="#fechuser-return-data-usersme" id="fechuser-return-data-usersme" style="color: inherit; text-decoration: none;">
+					<h3><code>fechUser()</code> return data users/me</h3>
+				</a>
+				<a href="#findentity-params" id="findentity-params" style="color: inherit; text-decoration: none;">
+					<h3><code>find(entity, params)</code></h3>
+				</a>
+				<a href="#findbyidentity-id" id="findbyidentity-id" style="color: inherit; text-decoration: none;">
+					<h3><code>findById(entity, id)</code></h3>
+				</a>
+				<a href="#countentity-params" id="countentity-params" style="color: inherit; text-decoration: none;">
+					<h3><code>count(entity, params)</code></h3>
+				</a>
+				<a href="#createentity-data" id="createentity-data" style="color: inherit; text-decoration: none;">
+					<h3><code>create(entity, data)</code></h3>
+				</a>
+				<a href="#updateentity-id-data" id="updateentity-id-data" style="color: inherit; text-decoration: none;">
+					<h3><code>update(entity, id, data)</code></h3>
+				</a>
+				<a href="#deleteentity-id" id="deleteentity-id" style="color: inherit; text-decoration: none;">
+					<h3><code>delete(entity, id)</code></h3>
+				</a>
+				<a href="#searchfilesquery" id="searchfilesquery" style="color: inherit; text-decoration: none;">
+					<h3><code>searchFiles(query)</code></h3>
+				</a>
+				<a href="#findfilesparams" id="findfilesparams" style="color: inherit; text-decoration: none;">
+					<h3><code>findFiles(params)</code></h3>
+				</a>
+				<a href="#findfileid" id="findfileid" style="color: inherit; text-decoration: none;">
+					<h3><code>findFile(id)</code></h3>
+				</a>
+				<a href="#uploaddata" id="uploaddata" style="color: inherit; text-decoration: none;">
+					<h3><code>upload(data)</code></h3>
+				</a>
+				<a href="#graphqlquery" id="graphqlquery" style="color: inherit; text-decoration: none;">
+					<h5><code>graphql(query)</code></h5>
+				</a>
+				<a href="#exemple-query-qraphql" id="exemple-query-qraphql" style="color: inherit; text-decoration: none;">
+					<h6>exemple query qraphql:</h6>
+				</a>
+				<pre><code class="language-js"><span style="color: #000000"> </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">DataQuery</span><span style="color: #000000"> =  </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #0000FF">this</span><span style="color: #000000">.</span><span style="color: #001080">$strapi</span><span style="color: #000000">.</span><span style="color: #795E26">graphql</span><span style="color: #000000">({</span>
+<span style="color: #000000">         </span><span style="color: #001080">query:</span><span style="color: #000000"> </span><span style="color: #A31515">`</span>
+<span style="color: #A31515">           query {</span>
+<span style="color: #A31515">             classes {</span>
+<span style="color: #A31515">               title</span>
+<span style="color: #A31515">                 user{</span>
+<span style="color: #A31515">                   username</span>
+<span style="color: #A31515">                 }</span>
+<span style="color: #A31515">               }</span>
+<span style="color: #A31515">          }</span>
+<span style="color: #A31515">         `</span>
+<span style="color: #000000">  });</span>
+</code></pre>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>MIT</p>
+				<ul>
+					<li><a href="https://aysnet1.github.io/qv-starpi">Documentation</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/lib_sdk.html">lib/sdk</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-external">
+						<a href="modules/types_types.html">types/types</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
